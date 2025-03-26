@@ -1,0 +1,143 @@
+.cart {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #FFF8DC; /* Amarillo claro */
+  border-top: 2px solid #D2B48C; /* Marrón claro */
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  z-index: 100;
+}
+
+.collapsed {
+  transform: translateY(100%); /* Lo oculta casi por completo */
+}
+
+.open {
+  transform: translateY(0);
+}
+
+.toggle-cart {
+  position: absolute;
+  top: -50px; /* Lo coloca justo encima del carrito */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #D2B48C; /* Marrón claro */
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s, transform 0.2s;
+  border-radius: 10px 10px 0 0; /* Bordes redondeados arriba */
+}
+
+.toggle-cart:hover {
+  background-color: #A0785A;
+}
+
+
+.cart-content {
+  padding: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.cart-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.cart-info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-price {
+  font-weight: bold;
+  color: #D2691E; /* Marrón oscuro */
+}
+
+.remove-btn {
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.remove-btn:hover {
+  background-color: #d44f4f;
+}
+
+.cart-total {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: right;
+}
+
+/* Botón Copiar Pedido */
+.copy-order-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.copy-order-btn:hover {
+  background-color: #45a049;
+}
+
+.copy-order-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.copy-order-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Estado de copiado */
+.copy-status {
+  text-align: center;
+  margin-top: 10px;
+  color: #4CAF50;
+  font-weight: bold;
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}

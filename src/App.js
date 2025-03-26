@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import StickerList from "./StickerList";
+import Cart from "./Cart";
+import Header from "./Header";
+import "./App.css";
+
 
 function App() {
+  const [cartItems, setCartItems] = useState([]); // Estado del carrito
+
+  // Función para agregar un sticker al carrito
+  const addToCart = (sticker) => {
+    setCartItems([...cartItems, sticker]);
+  };
+
+  const removeFromCart = (stickerName) => {
+    setCartItems((prevCart) => {
+      const updatedCart = [...prevCart];
+      const index = updatedCart.findIndex((sticker) => sticker.name === stickerName);
+  
+      if (index !== -1) {
+        if (updatedCart[index].quantity > 1) {
+          updatedCart[index].quantity -= 1;
+        } else {
+          updatedCart.splice(index, 1);
+        }
+      }
+  
+      return updatedCart;
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <StickerList addToCart={addToCart} />
+      <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
     </div>
   );
 }
