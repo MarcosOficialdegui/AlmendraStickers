@@ -59,11 +59,7 @@ function Cart({ cartItems = [], removeFromCart }) {
             <div>
               {groupedItems.map((sticker, index) => (
                 <div key={index} className="cart-item">
-                  <img
-                    src={sticker.image}
-                    alt={sticker.name}
-                    className="cart-image"
-                  />
+                  <img src={`${process.env.PUBLIC_URL}${sticker.image}`} alt={sticker.name}  className="cart-image"/>
                   <div className="cart-info">
                     <span>{sticker.name}</span>
                     <span className="cart-price">
