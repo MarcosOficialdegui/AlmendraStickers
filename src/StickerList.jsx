@@ -1,7 +1,7 @@
 import "./StickerList.css";
 
 const stickers = [
-    { id: 1, name: "Sol Argentina", price: 500, image: "/images/solarg.png"},
+    { id: 1, name: "Sol Argentina", price: 500, image: "images/solarg.png"},
     { id: 2, name: "Un verano sin ti", price: 4,image:"images/badbunny.png" },
     { id: 3, name: "Daddy", price: 4,image:"images/daddy.png" },
     { id: 4, name: "Estampita diego", price: 4,image:"images/diego.png" },
@@ -33,7 +33,25 @@ const stickers = [
     { id: 31, name: "Garfield", price: 4,image:"images/garfield.png" },
     { id: 32, name: "Good Days", price: 4,image:"images/gooddays.png" },
     { id: 33, name: "Study!", price: 4,image:"images/study.png" },
-    { id: 34, name: "Winnie Pooh", price: 4,image:"images/winnie p.png" },
+    { id: 34, name: "Alien", price: 4,image:"images/alien.png" },
+    { id: 35, name: "Winnie Pooh", price: 4,image:"images/winnie p.png" },
+    { id: 36, name: "Angel Caido", price: 4,image:"images/angel caido.png" },
+    { id: 37, name: "Ruta 40", price: 4,image:"images/arg.png" },
+    { id: 38, name: "Arpa", price: 4,image:"images/arpa.png" },
+    { id: 38, name: "Chromakopia", price: 4,image:"images/chromakopia.png" },
+    { id: 38, name: "Corazon", price: 4,image:"images/corazon.png" },
+    { id: 38, name: "Deftones", price: 4,image:"images/deftones.png" },
+    { id: 38, name: "Arpa", price: 4,image:"images/arpa.png" },
+    { id: 38, name: "Encendedor", price: 4,image:"images/encendedor.png" },
+    { id: 39, name: "Esqueleto en llamas", price: 4,image:"images/esqueleto.png" },
+    { id: 40, name: "Flores rosas", price: 4,image:"images/floores.png" },
+    { id: 41, name: "Ramo flores", price: 4,image:"images/floress.png" },
+    { id: 42, name: "Encendedor", price: 4,image:"images/encendedor.png" },
+    { id: 43, name: "Zapatilla", price: 4,image:"images/llanta.png" },
+    { id: 42, name: "Vans", price: 4,image:"images/vans.png" },
+    { id: 42, name: "Tyler ID", price: 4,image:"images/tylerid.png" },
+    { id: 43, name: "Paisaje", price: 4,image:"images/pasiaje1.png" },
+    { id: 43, name: "Ojo Turco", price: 4,image:"images/ojoturco.png" },
     
   ];
   
