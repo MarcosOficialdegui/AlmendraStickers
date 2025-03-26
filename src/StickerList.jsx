@@ -16,7 +16,7 @@ const stickers = [
   { id: 13, name: "Mariposa", price: 4, image: "/images/mariposa.png" },
   { id: 14, name: "MTV", price: 4, image: "/images/mtv.png" },
   { id: 15, name: "Ola de Kanawa", price: 4, image: "/images/ola.png" },
-  { id: 16, name: "Estampita Paisaje", price: 4, image: "/images/paisaje1.png" },
+  { id: 16, name: "Estampita Paisaje", price: 4, image: "/images/pasiaje1.png" },
   { id: 17, name: "Queen Cartas", price: 4, image: "/images/queen.png" },
   { id: 18, name: "Reader Carta", price: 4, image: "/images/reader.png" },
   { id: 19, name: "Pickle Rick", price: 4, image: "/images/rick.png" },
@@ -48,7 +48,11 @@ const stickers = [
   { id: 45, name: "Zapatilla", price: 4, image: "/images/llanta.png" },
   { id: 46, name: "Vans", price: 4, image: "/images/vans.png" },
   { id: 47, name: "Tyler ID", price: 4, image: "/images/tylerid.png" },
-  { id: 48, name: "Ojo Turco", price: 4, image: "/images/ojoturco.png" }
+  { id: 48, name: "Ojo Turco", price: 4, image: "/images/ojoturco.png" },
+  { id: 49, name: "Arcoiris", price: 4, image: "/images/arcoiris.png" },
+  { id: 50, name: "Luna", price: 4, image: "/images/moon.png" },
+  { id: 51, name: "Margarita", price: 4, image: "/images/margarita.png" },
+  { id: 52, name: "Snoopy", price: 4, image: "/images/snoopy.png" },
 ];
 
   
