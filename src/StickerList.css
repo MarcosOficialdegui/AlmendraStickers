@@ -9,7 +9,7 @@
 }
 
 .sticker-card {
-  width: 160px;
+  width: 160px; /* Tamaño base para desktop */
   border: 1px solid #e0e0e0;
   padding: 15px;
   text-align: center;
@@ -24,7 +24,7 @@
 .sticker-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  border-color: #D2B48C; /* Matching your theme */
+  border-color: #D2B48C;
 }
 
 .sticker-card img {
@@ -33,7 +33,7 @@
   object-fit: contain;
   border-radius: 5px;
   margin-bottom: 10px;
-  background: #f8f8f8; /* Light background for transparent images */
+  background: #f8f8f8;
 }
 
 .sticker-card p {
@@ -51,13 +51,13 @@
 }
 
 .sticker-price {
-  color: #D2691E; /* Matching your theme */
+  color: #D2691E;
   font-weight: bold;
   font-size: 15px;
 }
 
 .sticker-button {
-  background-color: #D2B48C; /* Matching your theme */
+  background-color: #D2B48C;
   color: white;
   border: none;
   padding: 8px 12px;
@@ -68,11 +68,11 @@
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 0.5px;
-  margin-top: auto; /* Pushes button to bottom */
+  margin-top: auto;
 }
 
 .sticker-button:hover {
-  background-color: #A0785A; /* Darker shade */
+  background-color: #A0785A;
 }
 
 /* Responsive adjustments */
@@ -80,22 +80,23 @@
   .sticker-container {
     gap: 15px;
     padding: 15px;
+    justify-content: space-around; /* Cambiado para mejor distribución */
   }
   
   .sticker-card {
-    width: 140px;
-    padding: 12px;
+    width: calc(50% - 20px); /* 2 columnas con gap incluido */
+    max-width: 160px; /* Máximo igual al desktop */
   }
 }
 
 @media (max-width: 480px) {
   .sticker-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 10px;
+    padding: 10px;
   }
   
   .sticker-card {
-    width: calc(50% - 10px);
+    width: calc(50% - 10px); /* 2 columnas ajustadas */
+    min-width: 120px; /* Ancho mínimo para móviles muy pequeños */
   }
 }
-
