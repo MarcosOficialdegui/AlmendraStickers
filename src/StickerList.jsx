@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import "./StickerList.css";
 
 const stickers = [
@@ -55,19 +56,56 @@ const stickers = [
   { id: 52, name: "Snoopy", price: 4, image: "/images/snoopy.png" },
 ];
 
-  
-  function StickerList({ addToCart }) {
-    return (
-      <div className="sticker-container">
-        {stickers.map((sticker) => (
-          <div key={sticker.id} className="sticker-card">
-            <img src={`${process.env.PUBLIC_URL}${sticker.image}`} alt={sticker.name} />
-            <p>{sticker.name} - ${sticker.price}</p>
-            <button className="sticker-button" onClick={() => addToCart(sticker)}>Agregar</button>
-          </div>
-        ))}
-      </div>
-    );
-  }
-  
-  export default StickerList;
+function StickerList({ addToCart }) {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  // Función para manejar el clic en la imagen
+  const handleImageClick = (image) => {
+    if (window.innerWidth > 768) { // Solo para PC
+      setSelectedImage(`${process.env.PUBLIC_URL}${image}`);
+    }
+  };
+
+  return (
+    <div className="sticker-container">
+      {stickers.map((sticker) => (
+        <div key={sticker.id} className="sticker-card">
+          <img 
+            src={`${process.env.PUBLIC_URL}${sticker.image}`}
+            alt={sticker.name}
+            onClick={() => handleImageClick(sticker.image)}
+            className="sticker-image"
+          />
+          <p>{sticker.name} - ${sticker.price}</p>
+          <button 
+            className="sticker-button" 
+            onClick={(e) => {
+              e.stopPropagation();
+              addToCart(sticker);
+            }}
+          >
+            Agregar
+          </button>
+        </div>
+      ))}
+
+      {/* Modal corregido */}
+      {selectedImage && (
+        <div 
+          className="image-modal" 
+          onClick={() => setSelectedImage(null)}
+          style={{ display: selectedImage ? 'flex' : 'none' }}
+        >
+          <img 
+            src={selectedImage} 
+            alt="Vista ampliada" 
+            className="enlarged-image"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default StickerList;

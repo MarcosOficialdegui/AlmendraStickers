@@ -1,5 +1,5 @@
 .almendra-header {
-  background: #FFF8DC; /* Fondo amarillo claro */
+  background: #FFF8DC;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 1rem 0;
   position: sticky;
@@ -30,7 +30,7 @@
 }
 
 .logo-almendra {
-  color: #D2B48C; /* Marrón claro */
+  color: #D2B48C; 
   font-weight: 700;
   position: relative;
 }
@@ -42,13 +42,13 @@
   left: 0;
   width: 100%;
   height: 8px;
-  background: rgba(210, 180, 140, 0.3); /* Marrón claro transparente */
+  background: rgba(210, 180, 140, 0.3); 
   z-index: -1;
   border-radius: 4px;
 }
 
 .logo-stickers {
-  color: #D2691E; /* Marrón anaranjado */
+  color: #D2691E; 
   font-weight: 600;
   margin-left: 8px;
 }
@@ -69,18 +69,18 @@
   opacity: 0.7;
 }
 
-/* Efecto hover */
+
 .logo-text:hover .logo-almendra {
   transform: translateY(-2px);
   transition: transform 0.2s ease;
 }
 
 .logo-text:hover .logo-stickers {
-  color: #A0522D; /* Marrón más oscuro al hover */
+  color: #A0522D; 
   transition: color 0.3s ease;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .logo-text {
     font-size: 1.8rem;
