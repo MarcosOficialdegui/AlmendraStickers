@@ -8,7 +8,7 @@ const stickers = [
   { id: 4, name: "Estampita Diego", price: 500, image: "/images/diego.png", available:true },
   { id: 5, name: "Diego", price: 500, image: "/images/diego2.png", available:true },
   { id: 6, name: "Fight Club", price: 500, image: "/images/fightclub.png", available:true },
-  { id: 7, name: "Classic Garage", price: 500, image: "/images/garage.png", available:true },
+  { id: 7, name: "Classic Garage", price: 500, image: "/images/garage.png", available:false },
   { id: 8, name: "Just A Girl", price: 450, image: "/images/girl.png", available:true },
   { id: 9, name: "The World Is Yours", price: 450, image: "/images/globo.png", available:true },
   { id: 10, name: "El Grito", price: 500, image: "/images/grito.png", available:true },
