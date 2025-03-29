@@ -4,12 +4,15 @@ import Cart from "./Cart";
 import Header from "./Header";
 import "./App.css";
 
-
 function App() {
-  const [cartItems, setCartItems] = useState([]); // Estado del carrito
+  const [cartItems, setCartItems] = useState([]);
 
-  // Función para agregar un sticker al carrito
+  // Función para agregar al carrito (con verificación de disponibilidad)
   const addToCart = (sticker) => {
+    if (!sticker.available) {
+      alert(`⚠️ ${sticker.name} no está disponible actualmente`);
+      return;
+    }
     setCartItems([...cartItems, sticker]);
   };
 
@@ -25,7 +28,6 @@ function App() {
           updatedCart.splice(index, 1);
         }
       }
-  
       return updatedCart;
     });
   };
