@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AlmendraStickers/static/css/main.5359680a.css",
-    "main.js": "/AlmendraStickers/static/js/main.b73200ca.js",
+    "main.css": "/AlmendraStickers/static/css/main.29c39ffd.css",
+    "main.js": "/AlmendraStickers/static/js/main.79767e6e.js",
     "static/js/453.0086fe32.chunk.js": "/AlmendraStickers/static/js/453.0086fe32.chunk.js",
     "index.html": "/AlmendraStickers/index.html",
-    "main.5359680a.css.map": "/AlmendraStickers/static/css/main.5359680a.css.map",
-    "main.b73200ca.js.map": "/AlmendraStickers/static/js/main.b73200ca.js.map",
+    "main.29c39ffd.css.map": "/AlmendraStickers/static/css/main.29c39ffd.css.map",
+    "main.79767e6e.js.map": "/AlmendraStickers/static/js/main.79767e6e.js.map",
     "453.0086fe32.chunk.js.map": "/AlmendraStickers/static/js/453.0086fe32.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5359680a.css",
-    "static/js/main.b73200ca.js"
+    "static/css/main.29c39ffd.css",
+    "static/js/main.79767e6e.js"
   ]
 }
