@@ -16,21 +16,48 @@ function Cart({ cartItems = [], removeFromCart }) {
     return acc;
   }, []);
 
-  // Calcular precio total
-  const totalPrice = groupedItems.reduce(
-    (acc, sticker) => acc + sticker.price * sticker.quantity,
+  // Calcular precio total con promociones
+  const totalQuantity = groupedItems.reduce(
+    (acc, sticker) => acc + sticker.quantity,
     0
   );
 
-  // Función para copiar el pedido
+  const allPrices = groupedItems.flatMap((sticker) =>
+    Array(sticker.quantity).fill(sticker.price)
+  );
+
+  let totalPrice = 0;
+  let promoMessage = "";
+
+  if (totalQuantity >= 10) {
+    const sortedPrices = [...allPrices].sort((a, b) => a - b);
+    const itemsToCharge = totalQuantity - 2;
+    totalPrice = sortedPrices
+      .slice(0, itemsToCharge)
+      .reduce((acc, p) => acc + p, 0);
+    promoMessage = "🎉 ¡Promo aplicada: 10 stickers al precio de 8!";
+  } else if (totalQuantity >= 5) {
+    const promoGroups = Math.floor(totalQuantity / 5);
+    const sortedPrices = [...allPrices].sort((a, b) => b - a);
+    const remainingPrices = sortedPrices.slice(promoGroups * 5);
+    totalPrice =
+      promoGroups * 2000 + remainingPrices.reduce((acc, p) => acc + p, 0);
+    promoMessage = "🎉 ¡Promo aplicada: 5 stickers por $2000!";
+  } else {
+    totalPrice = allPrices.reduce((acc, p) => acc + p, 0);
+  }
+
+  // Copiar pedido
   const copyOrderToClipboard = () => {
-    const orderText = groupedItems
-      .map(
-        (sticker) => 
-          `📌 ${sticker.name} - Cantidad: ${sticker.quantity} - $${(sticker.price * sticker.quantity).toFixed(2)}`
-      )
-      .join("\n") +
-      `\n\n💰 TOTAL: $${totalPrice.toFixed(2)}`;
+    const orderText =
+      groupedItems
+        .map(
+          (sticker) =>
+            `📌 ${sticker.name} - Cantidad: ${sticker.quantity} - $${(
+              sticker.price * sticker.quantity
+            ).toFixed(2)}`
+        )
+        .join("\n") + `\n\n💰 TOTAL: $${totalPrice.toFixed(2)}`;
 
     navigator.clipboard
       .writeText(orderText)
@@ -59,7 +86,11 @@ function Cart({ cartItems = [], removeFromCart }) {
             <div>
               {groupedItems.map((sticker, index) => (
                 <div key={index} className="cart-item">
-                  <img src={`${process.env.PUBLIC_URL}${sticker.image}`} alt={sticker.name}  className="cart-image"/>
+                  <img
+                    src={`${process.env.PUBLIC_URL}${sticker.image}`}
+                    alt={sticker.name}
+                    className="cart-image"
+                  />
                   <div className="cart-info">
                     <span>{sticker.name}</span>
                     <span className="cart-price">
@@ -77,9 +108,15 @@ function Cart({ cartItems = [], removeFromCart }) {
                   </div>
                 </div>
               ))}
+
               <div className="cart-total">
                 <strong>Total:</strong> ${totalPrice.toFixed(2)}
               </div>
+
+              {promoMessage && (
+                <p className="promo-applied">{promoMessage}</p>
+              )}
+
               <button
                 className="copy-order-btn"
                 onClick={copyOrderToClipboard}

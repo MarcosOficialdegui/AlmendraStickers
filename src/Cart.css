@@ -141,3 +141,11 @@
   80% { opacity: 1; }
   100% { opacity: 0; }
 }
+
+.promo-applied {
+  text-align: right;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-top: 5px;
+  animation: fadeInOut 2s ease-in-out;
+}
