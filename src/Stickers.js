@@ -16,7 +16,7 @@ const stickers = [
   { id: 11, name: "Luna Tarot", price: 500, image: "/images/luna.png", available:true },
   { id: 12, name: "Mariposa", price: 500, image: "/images/mariposa.png", available:true },
   { id: 110, name: "Mariposa Azul", price: 500, image: "/images/mariposaazul.png", available:true },
-  { id: 13, name: "MTV", price: 500, image: "/images/mtv.png", available:false },
+  { id: 13, name: "MTV", price: 500, image: "/images/mtv.png", available:true },
   { id: 14, name: "Ola de Kanawa", price: 500, image: "/images/ola.png", available:true },
   { id: 15, name: "Estampita Paisaje", price: 450, image: "/images/pasiaje1.png", available:true },
   { id: 16, name: "Queen Cartas", price: 500, image: "/images/queen.png", available:true },
