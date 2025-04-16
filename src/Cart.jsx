@@ -42,7 +42,7 @@ function Cart({ cartItems = [], removeFromCart }) {
     const remainingPrices = sortedPrices.slice(promoGroups * 5);
     totalPrice =
       promoGroups * 2000 + remainingPrices.reduce((acc, p) => acc + p, 0);
-    promoMessage = "🎉 ¡Promo aplicada: 5 stickers por $2000!";
+    promoMessage = "🎉 ¡Promo aplicada: 5 stickers al precio de 4!";
   } else {
     totalPrice = allPrices.reduce((acc, p) => acc + p, 0);
   }
