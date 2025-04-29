@@ -129,7 +129,7 @@ const stickers = [
   { id: 127, name: "Luna Van Gogh", price: 500, image: "/images/lunavangogh.png", available:true },
   { id: 128, name: "Mafalda", price: 500, image: "/images/mafalda.png", available:false },
   { id: 129, name: "Malvinas Argentinas", price: 500, image: "/images/malvinas.png", available:true },
-  { id: 130, name: "Max Goofy", price: 500, image: "/images/maxgoofy.png", available:true },
+  { id: 130, name: "Max Goofy", price: 500, image: "/images/maxgoofy.png", available:false },
   { id: 131, name: "Pink Floyd", price: 500, image: "/images/pinkfloyd.png", available:true },
   { id: 132, name: "Denis Rodman", price: 500, image: "/images/rodman.png", available:true },
   { id: 133, name: "Route 66", price: 500, image: "/images/route66.png", available:true },
