@@ -68,7 +68,7 @@ const stickers = [
   { id: 59, name: "Stitch Hawai", price: 450, image: "/images/stichhawai.png", available:true },
   { id: 60, name: "Stitch", price: 500, image: "/images/stich.png", available:true },
   { id: 61, name: "Skate", price: 500, image: "/images/skate.png", available:true },
-  { id: 62, name: "CARP", price: 500, image: "/images/carp.png", available:true },
+  { id: 62, name: "Escudo CARP", price: 500, image: "/images/carp.png", available:true },
   { id: 63, name: "Roman 10", price: 500, image: "/images/roman.png", available:true },
   { id: 64, name: "Bombonera", price: 500, image: "/images/bombonera.png", available:true },
   { id: 65, name: "Estampita Red", price: 500, image: "/images/red.png", available:true },
@@ -148,11 +148,12 @@ const stickers = [
   { id: 141, name: "Argentina", price: 500, image: "/images/argentina.png", available:true },
   { id: 142, name: "Blue Label Elissir", price: 500, image: "/images/bluelabel.png", available:true },
   { id: 143, name: "Burbuja", price: 500, image: "/images/burbuja.png", available:true },
-  { id: 144, name: "CARP", price: 500, image: "/images/carp.png", available:true },
+  { id: 144, name: "CARP", price: 500, image: "/images/carp2.png", available:true },
   { id: 145, name: "Carpincho Matero", price: 500, image: "/images/carpincho matero.png", available:true },
   { id: 146, name: "Stephen Curry", price: 500, image: "/images/curry3.png", available:true },
   { id: 148, name: "Ginobili", price: 500, image: "/images/ginobili.png", available:true },
-  { id: 150, name: "Pelota Basquet", price: 500, image: "/images/pelotabasquet.png", available:true }
+  { id: 150, name: "Pelota Basquet", price: 500, image: "/images/pelotabasquet.png", available:true },
+  { id: 151, name: "Charly", price: 500, image: "/images/charlyREAL.png", available:true }
 ];
 
 export default stickers;
