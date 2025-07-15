@@ -22,3 +22,32 @@ body {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
+
+.promo-banner {
+  background: linear-gradient(90deg, #ffe8a3, #fff4cc);
+  color: #3c2f1c;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  letter-spacing: 0.3px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  animation: slideDown 0.4s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+

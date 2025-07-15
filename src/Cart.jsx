@@ -22,27 +22,25 @@ function Cart({ cartItems = [], removeFromCart }) {
     0
   );
 
+  // Obtener todos los precios
   const allPrices = groupedItems.flatMap((sticker) =>
     Array(sticker.quantity).fill(sticker.price)
   );
 
+  // Calcular precio total con promoción
   let totalPrice = 0;
   let promoMessage = "";
 
-  if (totalQuantity >= 10) {
-    const sortedPrices = [...allPrices].sort((a, b) => a - b);
-    const itemsToCharge = totalQuantity - 2;
+  if (totalQuantity > 5) {
+    const sortedPrices = [...allPrices].sort((a, b) => b - a); // más caros primero
+    const freeStickers = Math.floor(totalQuantity / 6); // 1 gratis cada 6
+    const itemsToCharge = totalQuantity - freeStickers;
+
     totalPrice = sortedPrices
       .slice(0, itemsToCharge)
       .reduce((acc, p) => acc + p, 0);
-    promoMessage = "🎉 ¡Promo aplicada: 10 stickers al precio de 8!";
-  } else if (totalQuantity >= 5) {
-    const promoGroups = Math.floor(totalQuantity / 5);
-    const sortedPrices = [...allPrices].sort((a, b) => b - a);
-    const remainingPrices = sortedPrices.slice(promoGroups * 5);
-    totalPrice =
-      promoGroups * 2000 + remainingPrices.reduce((acc, p) => acc + p, 0);
-    promoMessage = "🎉 ¡Promo aplicada: 5 stickers al precio de 4!";
+
+    promoMessage = `🎉 ¡Promo aplicada: ${totalQuantity} stickers al precio de ${itemsToCharge}!`;
   } else {
     totalPrice = allPrices.reduce((acc, p) => acc + p, 0);
   }

@@ -9,6 +9,7 @@ function Header() {
           <span className="logo-stickers">Stickers</span>
         </div>
       </div>
+      
     </header>
   );
 }
