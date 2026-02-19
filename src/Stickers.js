@@ -1,5 +1,6 @@
 const stickers = [
     // ===== ARGENTINA ===== //
+    { id: 180, name: "Escudo Mate", price: 600, image: "/images/escudomate.png", available:true, category: "argentina" },
   { id: 80, name: "Sol Argentina", price: 600, image: "/images/solarg.png", available:true, category: "argentina" },
   { id: 172, name: "Banderita Arg", price: 600, image: "/images/banderitaarg.png", available:true, category: "argentina" },
   { id: 104, name: "Universidad Pública", price: 600, image: "/images/universidad.jpg", available:true, category: "argentina" },
@@ -15,7 +16,7 @@ const stickers = [
   { id: 125, name: "Homero Mate", price: 600, image: "/images/homeromate.png", available:true, category: "argentina" },
   { id: 155, name: "Fernet", price: 600, image: "/images/fernet.png", available:true, category: "argentina" },
   { id: 159, name: "Chipa Lover", price: 600, image: "/images/chipalover.png", available:true, category: "argentina" },
-
+{ id: 180, name: "Vaso Fernet", price: 600, image: "/images/vasofernet.png", available:true, category: "argentina" },
   // ===== FÚTBOL ARGENTINO ===== //
   { id: 24, name: "Estampita Di María (5x8cm)", price: 650, image: "/images/estampita_dimaria.png", available:true, category: "futbol-argentino" },
   { id: 25, name: "Estampita Messi (5x8cm)", price: 650, image: "/images/estampita_messi.png", available:true, category: "futbol-argentino" },
@@ -76,6 +77,7 @@ const stickers = [
   { id: 52, name: "Oscuro Extasis - Wos", price: 600, image: "/images/wos.png", available:true, category: "musica-argentina" },
   { id: 139, name: "Ysy A", price: 600, image: "/images/ysya.png", available:true, category: "musica-argentina" },
   { id: 171, name: "Tini", price: 550, image: "/images/tini.png", available:true, category: "musica-argentina" },
+  { id: 180, name: "Un Poco De Ruido", price: 600, image: "/images/unpocoderuido.png", available:true, category: "argentina" },
 
   // ===== MÚSICA INTERNACIONAL ===== //
   { id: 1, name: "Un verano sin ti", price: 600, image: "/images/badbunny.png", available:true, category: "musica-internacional" },
@@ -203,7 +205,11 @@ const stickers = [
   { id: 89, name: "F1 Ferrari", price: 500, image: "/images/autoferrari.png", available:true, category: "formula1" },
   { id: 90, name: "Estampita Colapinto", price: 600, image: "/images/estampitacolapinto.png", available:true, category: "formula1" },
   { id: 91, name: "Formula 1", price: 500, image: "/images/f1.png", available:true, category: "formula1" },
+ 
   { id: 117, name: "Colapinto 43", price: 500, image: "/images/colapinto43.png", available:true, category: "formula1" },
+
+
 ];
+
 
 export default stickers;
